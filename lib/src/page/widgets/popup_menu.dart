@@ -203,7 +203,7 @@ class PopupMenuState extends State<PopupMenu> {
   }
 
   Future<void> _openActionsAndValuesPage() async {
-    await Navigator.of(context).push(
+    await Navigator.of(context, rootNavigator: true).push(
       MaterialPageRoute(builder: (context) => const ActionsAndValuesPage()),
     );
   }
@@ -213,13 +213,13 @@ class PopupMenuState extends State<PopupMenu> {
   }
 
   Future<void> _openSearchPage() async {
-    await Navigator.of(context).push(
+    await Navigator.of(context, rootNavigator: true).push(
       MaterialPageRoute(builder: (context) => const SearchPage()),
     );
   }
 
   Future<void> _openAppInfo() async {
-    await Navigator.of(context).push(
+    await Navigator.of(context, rootNavigator: true).push(
       MaterialPageRoute(builder: (context) => const AppInfoPage()),
     );
   }

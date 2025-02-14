@@ -191,8 +191,7 @@ class _LogSearchPageState extends State<LogSearchPage> {
 
   /// Clicking on the log opens the details page
   Future<void> _onItemTap(LogBean bean, LogType type) async {
-    await Navigator.push(
-      context,
+    await Navigator.of(context, rootNavigator: true).push(
       MaterialPageRoute(
         builder: (ctx) => LogLocalDetailPage(
           logBean: bean,

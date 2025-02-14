@@ -34,7 +34,7 @@ dependencies:
   logger: ^2.0.2+1
 
   # BSD
-  package_info_plus: ^5.0.1
+  package_info_plus: ^6.0.0
 
   # MIT
   uuid: ^4.3.3
@@ -102,4 +102,3 @@ flutter:
       web:
         pluginClass: CrLoggerWeb
         fileName: cr_logger_web.dart
-

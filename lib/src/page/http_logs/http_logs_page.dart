@@ -94,8 +94,7 @@ class HttpLogsPageState extends BasePageWithProgress<HttpLogsPage> {
     if (onHttpBeanSelected != null) {
       onHttpBeanSelected(httpBean);
     } else {
-      await Navigator.push(
-        context,
+      await Navigator.of(context, rootNavigator: true).push(
         MaterialPageRoute(
           builder: (ctx) => HttpLogDetailsPage(httpBean),
         ),

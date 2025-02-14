@@ -137,8 +137,7 @@ class LogPageState extends BasePageWithProgress<LogPage> {
     if (widget.onLogBeanSelected != null) {
       widget.onLogBeanSelected?.call(logBean, widget.logType);
     } else {
-      await Navigator.push(
-        context,
+      await Navigator.of(context, rootNavigator: true).push(
         MaterialPageRoute(
           builder: (ctx) => LogLocalDetailPage(
             logBean: logBean,

@@ -158,8 +158,7 @@ class _HttpSearchPageState extends State<HttpSearchPage> {
 
   /// Clicking on the log opens the details page
   Future<void> _onHttpBeanSelected(HttpBean bean) async {
-    await Navigator.push(
-      context,
+    await Navigator.of(context, rootNavigator: true).push(
       MaterialPageRoute(
         builder: (ctx) => HttpLogDetailsPage(bean),
       ),
