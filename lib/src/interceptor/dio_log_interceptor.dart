@@ -33,10 +33,11 @@ final class DioLogInterceptor implements Interceptor {
       } else if (errorParser != null) {
         json = errorParser(err.error);
       } else {
+        json = err.response?.data;
         throw Exception(err);
       }
     } catch (e, _) {
-      json = err.error;
+      json = json ?? err.error;
     }
     final resOpt = ResponseBean()
       ..id = err.requestOptions.hashCode

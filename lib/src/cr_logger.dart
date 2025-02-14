@@ -152,7 +152,7 @@ final class CRLoggerInitializer {
 
     if (theme != null) {
       CRLoggerHelper.instance.theme =
-          theme.copyWithDefaultCardTheme(loggerTheme.cardTheme);
+          theme.copyWithDefaultCardTheme(loggerTheme.cardTheme as CardTheme);
     }
     this.logFileName = logFileName ?? this.logFileName;
     this.hiddenFields = hiddenFields ?? [];
