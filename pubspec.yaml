@@ -37,7 +37,7 @@ dependencies:
   package_info_plus: ^5.0.1
 
   # MIT
-  uuid: ^3.0.7
+  uuid: ^4.3.3
 
   # MIT
   app_settings: ^5.1.1
