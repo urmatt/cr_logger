@@ -359,7 +359,7 @@ final class CRLoggerInitializer {
 
     /// Show hover menu
     if (buttonEntry != null) {
-      Overlay.of(context).insert(buttonEntry);
+      Overlay.of(context, rootOverlay: true).insert(buttonEntry);
 
       /// Saving the logger opening method with the correct context
       _onOpenLogger = () {
@@ -414,13 +414,13 @@ final class CRLoggerInitializer {
         ),
       );
       _loggerEntry = newLoggerEntry;
-      Overlay.of(context).insert(newLoggerEntry);
+      Overlay.of(context, rootOverlay: true).insert(newLoggerEntry);
 
       /// The button should be above logger
       final buttonEntry = _buttonEntry;
       if (buttonEntry != null) {
         buttonEntry.remove();
-        Overlay.of(context).insert(buttonEntry);
+        Overlay.of(context, rootOverlay: true).insert(buttonEntry);
       }
     }
   }
