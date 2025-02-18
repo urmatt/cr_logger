@@ -40,7 +40,10 @@ dependencies:
   uuid: ^4.3.3
 
   # MIT
-  app_settings: ^5.1.1
+  app_settings:
+    git:
+      url: https://github.com/yakup2525/app_settings
+      ref: master
 
   # BSD
   path_provider: ^2.1.2
