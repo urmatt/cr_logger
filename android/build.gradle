@@ -11,14 +11,14 @@ if (localPropertiesFile.exists()) {
 
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '2.2.21'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:8.13.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -34,7 +34,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 30
+    namespace "com.cleveroad.cr_logger.cr_logger"
+
+    compileSdkVersion 36
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -50,12 +52,12 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
     }
 }
 
 
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
